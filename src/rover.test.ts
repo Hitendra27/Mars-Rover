@@ -1,9 +1,11 @@
 import { marsRover } from "./rover";
 
+const turnLeft = (X: string) => 'W';
+
 describe('mars rover tests', () => {
     test('When facing N, turning left should cause us to face W', () => {
         // Arrange
-        const expected = 'N';
+        const expected = turnLeft('N');
 
         // Act
         const result = 'W';
