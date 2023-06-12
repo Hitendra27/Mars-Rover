@@ -14,4 +14,15 @@ describe('mars rover tests', () => {
         expect(result).toBe(expected);
     });
 
+    test('When facing W, turning left should cause us to face S', () => {
+        // Arrange
+        const expected = turnLeft('W');
+
+        // Act
+        const result = 'S';
+
+        // Assert
+        expect(result).toBe(expected);
+    })
+
 });
