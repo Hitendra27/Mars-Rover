@@ -13,6 +13,19 @@ export const turnLeft = (X: string) => {
           return "N";
     }
 
+};
+
+export const turnRight = (X: string) => {
+    switch (X) {
+        case "N":
+          return "E";
+        case "E":
+          return "S";
+        case "S":
+          return "W";
+        case "W":
+          return "N";
+    }
 }
 
 
@@ -66,7 +79,7 @@ describe('mars rover turn Left tests', () => {
 describe('mars rover turn Right tests', () => {
     test('When facing N, turning left should cause us to face W', () => {
         // Arrange
-        const expected = turnLeft('N');
+        const expected = turnRight('N');
 
         // Act
         const result = 'E';
@@ -77,7 +90,7 @@ describe('mars rover turn Right tests', () => {
 
     test('When facing W, turning left should cause us to face S', () => {
         // Arrange
-        const expected = turnLeft('E');
+        const expected = turnRight('E');
 
         // Act
         const result = 'S';
@@ -88,7 +101,7 @@ describe('mars rover turn Right tests', () => {
 
     test('When face S, turning left should cause us to face E', () => {
         // Arrange
-        const expected = turnLeft('S');
+        const expected = turnRight('S');
 
         // Act
         const result = 'W';
@@ -99,7 +112,7 @@ describe('mars rover turn Right tests', () => {
 
     test('When face E, turning left should cause us to face N', () => {
         // Arrange
-        const expected = turnLeft('W');
+        const expected = turnRight('W');
 
         // Act
         const result = 'N'
