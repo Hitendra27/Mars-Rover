@@ -1,5 +1,3 @@
-//export const marsRover = () => {}
-
 export const turnLeft = (X: string) => {
     switch (X) {
         case "N":
@@ -11,5 +9,4 @@ export const turnLeft = (X: string) => {
         case "E":
           return "N";
     }
-
 }

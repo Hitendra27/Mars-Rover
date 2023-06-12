@@ -1,32 +1,5 @@
-//import { marsRover } from "./rover";
-//import { turnLeft } from "./rover"; 
-
-export const turnLeft = (X: string) => {
-    switch (X) {
-        case "N":
-          return "W";
-        case "W":
-          return "S";
-        case "S":
-          return "E";
-        case "E":
-          return "N";
-    }
-
-};
-
-export const turnRight = (X: string) => {
-    switch (X) {
-        case "N":
-          return "E";
-        case "E":
-          return "S";
-        case "S":
-          return "W";
-        case "W":
-          return "N";
-    }
-}
+import { turnLeft } from "./turnLeft"; 
+import { turnRight } from "./turnRight";
 
 
 describe('mars rover turn Left tests', () => {
