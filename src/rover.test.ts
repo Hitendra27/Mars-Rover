@@ -1,6 +1,9 @@
 import { marsRover } from "./rover";
 
-const turnLeft = (X: string) => 'W';
+const turnLeft = (X: string) => {
+    if (X === 'N') return 'W';
+    return 'S';
+}
 
 describe('mars rover tests', () => {
     test('When facing N, turning left should cause us to face W', () => {
