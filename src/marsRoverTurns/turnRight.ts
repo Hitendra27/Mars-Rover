@@ -1,12 +1,7 @@
-export const turnRight = (X: string) => {
-    switch (X) {
-        case "N":
-          return "E";
-        case "E":
-          return "S";
-        case "S":
-          return "W";
-        case "W":
-          return "N";
-    }
+type Heading = "N" | "W" | "S" | "E";
+const Compass: Array<Heading> = ["N", "E", "S", "W"];
+
+export const turnRight = (heading: Heading) => {
+    const idx = Compass.indexOf(heading);
+    return Compass[idx + 1] % 4;
 }
