@@ -1,7 +1,3 @@
-type Heading = "N" | "W" | "S" | "E";
-const Compass: Array<Heading> = ["N", "E", "S", "W"];
+import { rotate, Heading } from "./Rotate";
 
-export const turnLeft = (heading: Heading) => {
-    const idx = Compass.indexOf(heading);
-    return Compass[(idx + 3) % 4];
-}
+export const turnLeft =  rotate(3);
