@@ -3,5 +3,5 @@ const Compass: Array<Heading> = ["N", "E", "S", "W"];
 
 export const turnLeft = (heading: Heading) => {
     const idx = Compass.indexOf(heading);
-    return Compass[(idx - 1) % 4];
+    return Compass[(idx + 3) % 4];
 }
