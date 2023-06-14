@@ -1,5 +1,5 @@
 import readline from 'readline';
-//import Rover from './rover';
+import { Rover } from '../src/marsRoverMove/marsRover';
 
 const rl = readline.createInterface({
     input: process.stdin,
